@@ -16,6 +16,11 @@
       height: 200px;
       background: url('images/ball.png') no-repeat;
       background-size: 100%;
+      animation: spin 2s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0); }
+      to { transform: rotate(360deg); }
     }
 	</style>
 </head>
