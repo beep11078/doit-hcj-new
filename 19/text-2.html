@@ -33,6 +33,16 @@
 
   <script>
     // Do it! DOM을 사용해 텍스트와 이미지 수정하기
+    let heading = document.querySelector('#heading');
+    let cup = document.querySelector('#cup');
+    const updateHeading = function () {
+      heading.innerText = '추천! 오늘의 커피';
+    };
+    const updateCupImage = function () {
+      cup.src = 'images/coffee-blue.jpg';
+    };
+    heading.onclick = updateHeading;
+    cup.onclick = updateCupImage;
 
   </script>
 </body>
