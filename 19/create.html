@@ -18,5 +18,24 @@
     <hr>  
     <ul id="itemList"></ul>  
   </div>
+
+  <script>
+    let subject = document.querySelector('#subject');
+    let button = document.querySelector('button');
+    button.addEventListener('click', function(event){
+      event.preventDefault();
+      newRecord();
+    })
+
+    function newRecord() {
+      const itemList = document.querySelector('#itemList');
+      const newItem = document.createElement('li');
+      const newText = document.createTextNode(subject.value);
+      newItem.appendChild(newText);
+      itemList.appendChild(newItem);
+
+      subject.value = '';
+    }
+  </script>
 </body>
 </html>
